@@ -16,11 +16,17 @@ namespace ApiEventosCore.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.ApplyConfiguration(new EventoMapping());
-            modelBuilder.ApplyConfiguration(new UsuarioMapping());
+            modelBuilder.ApplyConfiguration(new UsuarioMapping());            
 
             base.OnModelCreating(modelBuilder);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("");
+
+            base.OnConfiguring(optionsBuilder);
         }
     }
 }
