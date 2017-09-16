@@ -9,7 +9,6 @@ namespace ApiEventosCore.Controllers
 {
     public class UsuarioController : Controller
     {
-        // GET: api/values
         [HttpGet]
         public IEnumerable<Usuario> ObterTodos()
         {
@@ -19,7 +18,6 @@ namespace ApiEventosCore.Controllers
             }
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
         public async Task<Usuario> BuscarPorId(int id)
         {
@@ -29,7 +27,6 @@ namespace ApiEventosCore.Controllers
             }
         }
 
-        // POST api/values
         [HttpPost]
         public async void Novo([FromBody]Usuario evento)
         {
@@ -40,13 +37,11 @@ namespace ApiEventosCore.Controllers
             }
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
         public async void Delete(int id)
         {

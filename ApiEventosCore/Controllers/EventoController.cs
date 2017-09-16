@@ -7,6 +7,7 @@ using ApiEventosCore.Models;
 using Microsoft.Extensions.Configuration;
 using ApiEventosCore.Data;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiEventosCore.Controllers
 {
@@ -19,8 +20,8 @@ namespace ApiEventosCore.Controllers
             _loggerFactory = loggerFactory;
         }
 
-        // GET: api/values
         [HttpGet]
+        [Authorize]
         public IEnumerable<Evento> ObterTodos()
         {
             using (var ctx = new EventosDataContext())
@@ -31,7 +32,6 @@ namespace ApiEventosCore.Controllers
             }
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
         public async Task<Evento> BuscarPorId(int id)
         {
@@ -42,7 +42,6 @@ namespace ApiEventosCore.Controllers
             }
         }
 
-        // POST api/values
         [HttpPost]
         public async void Novo([FromBody]Evento evento)
         {
@@ -54,13 +53,11 @@ namespace ApiEventosCore.Controllers
             }
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
         public async void Delete(int id)
         {
