@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ApiEventosCore.Models
 {
@@ -38,5 +35,16 @@ namespace ApiEventosCore.Models
         public bool Cancelado { get; set; }
 
         public DateTime DataDeCadastro { get; set; } = DateTime.Now;
+
+        public override string ToString()
+        {
+            return "Eventos";
+        }
+
+        public void ValidaSeAhDataDeIncioEhValida()
+        {
+            if (DataInicio.Date < DateTime.Now)
+                throw new Exception("Data de Incio não pode ser menor que a data atual :" + DateTime.Now.Date);
+        }
     }
 }

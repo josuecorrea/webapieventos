@@ -3,6 +3,7 @@ using Dapper;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace ApiEventosCore.Data
 {
@@ -31,8 +32,11 @@ namespace ApiEventosCore.Data
             using (SqlConnection conexao = new SqlConnection(
                 _configuracoes.GetConnectionString("BaseEventos")))
             {
-                return conexao.QueryFirstOrDefault<List<Evento>>(
-                    "SELECT * FROM dbo.Evento ");
+
+                var listaDeEventos = conexao.QueryFirstOrDefault<List<Evento>>(
+                    "SELECT * FROM dbo.EVENTO ");
+
+                return listaDeEventos.ToList();
             }
         }
     }

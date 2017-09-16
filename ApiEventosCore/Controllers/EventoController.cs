@@ -21,22 +21,31 @@ namespace ApiEventosCore.Controllers
         [HttpGet]
         public IEnumerable<Evento> ObterTodos()
         {
-            var context = new EventoDapperDAO(_configuracoes);
-
-            return context.ObterTodos();
+            using (var ctx = new EventosDataContext())
+            {
+                return ctx.Evento.ToList();
+            }
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Evento Get(int id)
+        public async Task<Evento> BuscarPorId(int id)
         {
-            return new Evento();
+            using (var ctx = new EventosDataContext())
+            {
+               return await ctx.Evento.FindAsync(id);
+            }
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]Evento evento)
+        public async void Novo([FromBody]Evento evento)
         {
+            using (var ctx = new EventosDataContext())
+            {
+                await ctx.Evento.AddAsync(evento);
+                await ctx.SaveChangesAsync();
+            }
         }
 
         // PUT api/values/5
@@ -47,8 +56,13 @@ namespace ApiEventosCore.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async void Delete(int id)
         {
+            using (var ctx = new EventosDataContext())
+            {
+                ctx.Evento.Remove(await ctx.Evento.FindAsync(id));
+                await ctx.SaveChangesAsync();
+            }
         }
     }
 }
