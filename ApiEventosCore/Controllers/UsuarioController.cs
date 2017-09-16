@@ -1,6 +1,7 @@
 ﻿using ApiEventosCore.Data;
 using ApiEventosCore.Models;
 using ApiEventosCore.Security;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace ApiEventosCore.Controllers
     public class UsuarioController : Controller
     {
         [HttpGet]
+        [Authorize]
         public IEnumerable<Usuario> ObterTodos()
         {
             using (var ctx = new EventosDataContext())
@@ -20,6 +22,7 @@ namespace ApiEventosCore.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<Usuario> BuscarPorId(int id)
         {
             using (var ctx = new EventosDataContext())
@@ -40,11 +43,13 @@ namespace ApiEventosCore.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public void Put(int id, [FromBody]string value)
         {
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async void Delete(int id)
         {
             using (var ctx = new EventosDataContext())

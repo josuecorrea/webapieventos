@@ -32,32 +32,21 @@ namespace ApiEventosCore
 
             EventosDataContext.ConnectionString = Configuration.GetConnectionString("BaseEventos");
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Title = "Evento API", Version = "v1" });
-            });
 
             var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
-          
-
             var tokenValidationParameters = new TokenValidationParameters
             {
-                // The signing key must match!
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = signingKey,
 
-                // Validate the JWT Issuer (iss) claim
                 ValidateIssuer = true,
                 ValidIssuer = "ExampleIssuer",
 
-                // Validate the JWT Audience (aud) claim
                 ValidateAudience = true,
                 ValidAudience = "ExampleAudience",
-
-                // Validate the token expiry
+                
                 ValidateLifetime = true,
 
-                // If you want to allow a certain amount of clock drift, set that here:
                 ClockSkew = TimeSpan.Zero
             };
 
@@ -79,6 +68,11 @@ namespace ApiEventosCore
                 x.ExpireTimeSpan = TimeSpan.FromDays(105);
                 x.LoginPath = "/Account/Login";
                 x.LogoutPath = "/Account/Logout";
+            });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Evento API", Version = "v1" });
             });
 
             services.AddMvc();
