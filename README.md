@@ -4,4 +4,4 @@
 
 Api Documentation
 
-http://localhost:<random_port>/swagge
+http://localhost:<random_port>/swagger
