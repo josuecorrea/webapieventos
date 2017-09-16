@@ -21,6 +21,8 @@ namespace ApiEventosCore
                _ => Configuration);
             services.AddTransient<EventoDapperDAO>();
 
+            EventosDataContext.ConnectionString = Configuration.GetConnectionString("BaseEventos");
+
             services.AddMvc();
         }
 

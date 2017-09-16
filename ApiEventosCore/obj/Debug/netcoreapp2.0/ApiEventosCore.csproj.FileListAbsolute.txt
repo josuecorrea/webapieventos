@@ -6,3 +6,6 @@ C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netc
 C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netcoreapp2.0\ApiEventosCore.csproj.CoreCompileInputs.cache
 C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netcoreapp2.0\ApiEventosCore.AssemblyInfoInputs.cache
 C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netcoreapp2.0\ApiEventosCore.AssemblyInfo.cs
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\bin\Debug\netcoreapp2.0\ApiEventosCore.pdb
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netcoreapp2.0\ApiEventosCore.dll
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netcoreapp2.0\ApiEventosCore.pdb

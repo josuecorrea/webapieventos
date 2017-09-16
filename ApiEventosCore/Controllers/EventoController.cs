@@ -4,17 +4,26 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ApiEventosCore.Models;
+using Microsoft.Extensions.Configuration;
+using ApiEventosCore.Data;
 
 namespace ApiEventosCore.Controllers
 {
     [Route("api/[controller]")]
     public class EventoController : Controller
-    {        
+    {
+        private IConfiguration _configuracoes;
+        public EventoController(IConfiguration config)
+        {
+            _configuracoes = config;
+        }
         // GET: api/values
         [HttpGet]
-        public IEnumerable<Evento> Get()
+        public IEnumerable<Evento> ObterTodos()
         {
-            return new List<Evento>();
+            var context = new EventoDapperDAO(_configuracoes);
+
+            return context.ObterTodos();
         }
 
         // GET api/values/5
