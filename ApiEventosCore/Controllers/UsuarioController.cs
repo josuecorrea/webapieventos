@@ -1,5 +1,6 @@
 ﻿using ApiEventosCore.Data;
 using ApiEventosCore.Models;
+using ApiEventosCore.Security;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,7 @@ namespace ApiEventosCore.Controllers
         {
             using (var ctx = new EventosDataContext())
             {
+                evento.Senha = EncryptPassword.Encode(evento.Senha);
                 await ctx.Usuario.AddAsync(evento);
                 await ctx.SaveChangesAsync();
             }

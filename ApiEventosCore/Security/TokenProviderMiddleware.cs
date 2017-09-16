@@ -49,7 +49,7 @@ namespace ApiEventosCore.Security
             var username = context.Request.Form["username"];
             var password = context.Request.Form["password"];
 
-            var identity = await GetIdentity(username, password);
+            var identity = await GetIdentity(username, EncryptPassword.Encode(password));
             if (identity == null)
             {
                 context.Response.StatusCode = 400;
@@ -87,7 +87,11 @@ namespace ApiEventosCore.Security
 
         private Task<ClaimsIdentity> GetIdentity(string username, string password)
         {
-            if (username == "TEST" && password == "TEST123")
+            var ctx = new EventosDataContext();
+            
+            var userExists = ctx.Usuario.Where(c => c.UserName == username && c.Senha == password).FirstOrDefault();
+
+            if (userExists != null)
             {
                 return Task.FromResult(new ClaimsIdentity(new System.Security.Principal.GenericIdentity(username, "Token"), new Claim[] { }));
             }
