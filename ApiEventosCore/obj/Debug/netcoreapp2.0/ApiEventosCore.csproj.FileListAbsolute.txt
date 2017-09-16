@@ -1,0 +1,8 @@
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\bin\Debug\netcoreapp2.0\ApiEventosCore.deps.json
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\bin\Debug\netcoreapp2.0\ApiEventosCore.runtimeconfig.json
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\bin\Debug\netcoreapp2.0\ApiEventosCore.runtimeconfig.dev.json
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\bin\Debug\netcoreapp2.0\ApiEventosCore.dll
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netcoreapp2.0\ApiEventosCore.csprojResolveAssemblyReference.cache
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netcoreapp2.0\ApiEventosCore.csproj.CoreCompileInputs.cache
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netcoreapp2.0\ApiEventosCore.AssemblyInfoInputs.cache
+C:\Projetos\TestePortalTelemedicina\ApiEventosCore\ApiEventosCore\obj\Debug\netcoreapp2.0\ApiEventosCore.AssemblyInfo.cs
