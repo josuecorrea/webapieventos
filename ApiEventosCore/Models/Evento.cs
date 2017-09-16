@@ -18,11 +18,6 @@ namespace ApiEventosCore.Models
         [MinLength(5, ErrorMessage = "O nome deve conter no mínimo 5 caracters")]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "Informe o nome do usuário")]
-        [MaxLength(30, ErrorMessage = "O nome deve conter no máxino 60 caracters")]
-        [MinLength(5, ErrorMessage = "O nome deve conter no mínimo 5 caracters")]
-        public string NomeUsuario { get; set; }
-
         [Required(ErrorMessage = "Informe a data de início")]
         public DateTime DataInicio { get; set; }
 

@@ -9,7 +9,7 @@ namespace ApiEventosCore.Controllers
 {
     [Route("api/[controller]")]
     public class EventoController : Controller
-    {
+    {        
         // GET: api/values
         [HttpGet]
         public IEnumerable<Evento> Get()
