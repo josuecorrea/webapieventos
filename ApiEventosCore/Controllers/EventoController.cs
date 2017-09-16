@@ -1,13 +1,11 @@
-﻿using System;
+﻿using ApiEventosCore.Data;
+using ApiEventosCore.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using ApiEventosCore.Models;
-using Microsoft.Extensions.Configuration;
-using ApiEventosCore.Data;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Authorization;
 
 namespace ApiEventosCore.Controllers
 {
@@ -21,7 +19,6 @@ namespace ApiEventosCore.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public IEnumerable<Evento> ObterTodos()
         {
             using (var ctx = new EventosDataContext())
@@ -43,6 +40,7 @@ namespace ApiEventosCore.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async void Novo([FromBody]Evento evento)
         {
             using (var ctx = new EventosDataContext())
@@ -54,11 +52,13 @@ namespace ApiEventosCore.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public void Put(int id, [FromBody]string value)
         {
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async void Delete(int id)
         {
             using (var ctx = new EventosDataContext())
@@ -66,6 +66,16 @@ namespace ApiEventosCore.Controllers
                // _logger.LogInformation("Excluiu um Evento");
                 ctx.Evento.Remove(await ctx.Evento.FindAsync(id));
                 await ctx.SaveChangesAsync();
+            }
+        }
+
+        [HttpDelete("{id}")]
+        [Authorize]
+        public IEnumerable<Evento> ObterEventosPorUsuario(int id)
+        {
+            using (var ctx = new EventosDataContext())
+            {
+                return ctx.Evento.Where(c => c.Id == id).ToList();
             }
         }
     }
