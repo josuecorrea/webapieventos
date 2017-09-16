@@ -6,23 +6,27 @@ using Microsoft.AspNetCore.Mvc;
 using ApiEventosCore.Models;
 using Microsoft.Extensions.Configuration;
 using ApiEventosCore.Data;
+using Microsoft.Extensions.Logging;
 
 namespace ApiEventosCore.Controllers
 {
     [Route("api/[controller]")]
     public class EventoController : Controller
     {
-        private IConfiguration _configuracoes;
-        public EventoController(IConfiguration config)
+        ILoggerFactory _loggerFactory;
+        public EventoController(ILoggerFactory loggerFactory)
         {
-            _configuracoes = config;
+            _loggerFactory = loggerFactory;
         }
+
         // GET: api/values
         [HttpGet]
         public IEnumerable<Evento> ObterTodos()
         {
             using (var ctx = new EventosDataContext())
             {
+                //var logger = _loggerFactory.CreateLogger("Debug");
+                //logger.LogInformation("Solicitou lista de eventos");
                 return ctx.Evento.ToList();
             }
         }
@@ -33,7 +37,8 @@ namespace ApiEventosCore.Controllers
         {
             using (var ctx = new EventosDataContext())
             {
-               return await ctx.Evento.FindAsync(id);
+                //_logger.LogInformation("Solicitou um Evento");
+                return await ctx.Evento.FindAsync(id);
             }
         }
 
@@ -43,6 +48,7 @@ namespace ApiEventosCore.Controllers
         {
             using (var ctx = new EventosDataContext())
             {
+               // _logger.LogInformation("Adicionou um novo Evento");
                 await ctx.Evento.AddAsync(evento);
                 await ctx.SaveChangesAsync();
             }
@@ -60,6 +66,7 @@ namespace ApiEventosCore.Controllers
         {
             using (var ctx = new EventosDataContext())
             {
+               // _logger.LogInformation("Excluiu um Evento");
                 ctx.Evento.Remove(await ctx.Evento.FindAsync(id));
                 await ctx.SaveChangesAsync();
             }
