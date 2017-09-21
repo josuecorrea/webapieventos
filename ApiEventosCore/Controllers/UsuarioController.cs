@@ -3,16 +3,19 @@ using ApiEventosCore.Models;
 using ApiEventosCore.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ApiEventosCore.Controllers
 {
+    [Route("api/[controller]")]
     public class UsuarioController : Controller
     {
         [HttpGet]
         [Authorize]
+        [Route("obtertodos")]
         public IEnumerable<Usuario> ObterTodos()
         {
             using (var ctx = new EventosDataContext())
@@ -23,6 +26,7 @@ namespace ApiEventosCore.Controllers
 
         [HttpGet("{id}")]
         [Authorize]
+        [Route("buscaporid")]
         public async Task<Usuario> BuscarPorId(int id)
         {
             using (var ctx = new EventosDataContext())
@@ -32,12 +36,14 @@ namespace ApiEventosCore.Controllers
         }
 
         [HttpPost]
-        public async void Novo([FromBody]Usuario evento)
+        [AllowAnonymous]
+        [Route("novo")]
+        public async void Novo([FromBody]Usuario usuario)
         {
             using (var ctx = new EventosDataContext())
             {
-                evento.Senha = EncryptPassword.Encode(evento.Senha);
-                await ctx.Usuario.AddAsync(evento);
+                usuario.Senha = EncryptPassword.Encode(usuario.Senha);
+                await ctx.Usuario.AddAsync(usuario);
                 await ctx.SaveChangesAsync();
             }
         }
@@ -50,6 +56,7 @@ namespace ApiEventosCore.Controllers
 
         [HttpDelete("{id}")]
         [Authorize]
+        [Route("delete")]
         public async void Delete(int id)
         {
             using (var ctx = new EventosDataContext())
@@ -57,6 +64,33 @@ namespace ApiEventosCore.Controllers
                 ctx.Usuario.Remove(await ctx.Usuario.FindAsync(id));
                 await ctx.SaveChangesAsync();
             }
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("crieusuariopadrao")]
+        public async Task<JsonResult> CrieUsuarioPadrao()
+        {
+            Usuario usuario;
+            var senha = "123456";
+            using (var ctx = new EventosDataContext())
+            {
+                usuario = new Usuario
+                {
+                    DataCadastro = DateTime.Now.Date,
+                    Email = "admin@mail.com",
+                    Nome = "admin",
+                    Senha = senha,
+                    UserName = "admin"
+
+                };
+
+                usuario.Senha = EncryptPassword.Encode(usuario.Senha);
+                await ctx.Usuario.AddAsync(usuario);
+                await ctx.SaveChangesAsync();
+            }
+
+            return new JsonResult($"Usuario: {usuario.UserName} Senha: {senha}." );
         }
     }
 }

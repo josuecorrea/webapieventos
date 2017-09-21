@@ -9,7 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.Text;
 
@@ -32,6 +31,14 @@ namespace ApiEventosCore
 
             EventosDataContext.ConnectionString = Configuration.GetConnectionString("BaseEventos");
 
+            //services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Policy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
 
             var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
             var tokenValidationParameters = new TokenValidationParameters
@@ -68,27 +75,29 @@ namespace ApiEventosCore
                 x.ExpireTimeSpan = TimeSpan.FromDays(105);
                 x.LoginPath = "/Account/Login";
                 x.LogoutPath = "/Account/Logout";
-            });
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Title = "Evento API", Version = "v1" });
-            });
+            });                    
 
             services.AddMvc();
+
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+            //});
+
         }
 
         private static readonly string secretKey = "apieventos_secretkey!123";
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            //app.UseSwagger();
+            //app.UseSwaggerUI(c =>
+            //{
+            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Evento API V1");
+            //});
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Evento API V1");
-            });
 
             if (env.IsDevelopment())
             {

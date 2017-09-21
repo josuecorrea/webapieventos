@@ -19,6 +19,8 @@ namespace ApiEventosCore.Controllers
         }
 
         [HttpGet]
+        [Route("obtertodos")]
+        [AllowAnonymous]
         public IEnumerable<Evento> ObterTodos()
         {
             using (var ctx = new EventosDataContext())
@@ -30,6 +32,7 @@ namespace ApiEventosCore.Controllers
         }
 
         [HttpGet("{id}")]
+        [Route("buscarporid")]
         public async Task<Evento> BuscarPorId(int id)
         {
             using (var ctx = new EventosDataContext())
@@ -41,6 +44,7 @@ namespace ApiEventosCore.Controllers
 
         [HttpPost]
         [Authorize]
+        [Route("novo")]
         public async void Novo([FromBody]Evento evento)
         {
             using (var ctx = new EventosDataContext())
@@ -59,6 +63,7 @@ namespace ApiEventosCore.Controllers
 
         [HttpDelete("{id}")]
         [Authorize]
+        [Route("delete")]
         public async void Delete(int id)
         {
             using (var ctx = new EventosDataContext())
@@ -71,6 +76,7 @@ namespace ApiEventosCore.Controllers
 
         [HttpDelete("{id}")]
         [Authorize]
+        [Route("obtereventosporusuario")]
         public IEnumerable<Evento> ObterEventosPorUsuario(int id)
         {
             using (var ctx = new EventosDataContext())

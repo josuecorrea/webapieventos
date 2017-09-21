@@ -3283,69 +3283,6 @@
           "lib/netstandard1.5/StackExchange.Redis.StrongName.dll": {}
         }
       },
-      "Swashbuckle.AspNetCore/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "Swashbuckle.AspNetCore.Swagger": "1.0.0",
-          "Swashbuckle.AspNetCore.SwaggerGen": "1.0.0",
-          "Swashbuckle.AspNetCore.SwaggerUI": "1.0.0"
-        },
-        "compile": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.Swagger/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0",
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.ApiExplorer": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.0",
-          "NETStandard.Library": "1.6.1",
-          "Swashbuckle.AspNetCore.Swagger": "1.0.0",
-          "System.Xml.XPath": "4.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Routing": "1.0.0",
-          "Microsoft.AspNetCore.StaticFiles": "1.0.0",
-          "Microsoft.Extensions.FileProviders.Embedded": "1.0.0",
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "9.0.1",
-          "System.Xml.XPath": "4.0.0"
-        },
-        "compile": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
-        }
-      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5081,7 +5018,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.Xml.XPath.dll": {}
+          "ref/netstandard1.3/_._": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
@@ -6315,7 +6252,7 @@
       ]
     },
     "Microsoft.Data.Edm/5.8.2": {
-      "sha512": "P/d8DxA6MFHroBEn/jW0LMQSIKnsRRibrZtRCLfov2boQfrQ1R1BVgkJ5oIhcQsOm0l4POv+I2ny6RBsclNbOw==",
+      "sha512": "h1tOn8HejyYOxSKflUbyYI/71TAKI4200gmFTiPCCxHKNW93pWu/D1ZVXIU+wmHAmAqSswUvF3RjrXxfPT/Gqg==",
       "type": "package",
       "path": "microsoft.data.edm/5.8.2",
       "files": [
@@ -6379,7 +6316,7 @@
       ]
     },
     "Microsoft.Data.OData/5.8.2": {
-      "sha512": "oEIUtXcRiKogF0yZxA+QdgxoBJ34989qL/5xOSrTfxAhzNJV5Hw6DRdWgUCpeXFMoJUQx7ptbHCN+My/LCQfsg==",
+      "sha512": "gl0JE68CSX0G5Zhoa42yASeRFhq8eq3NRFtHXyhLVIuF0YxfHjJRwFc9oL0lT3f3NEy3aY0gO2MBrRb6Yyp/2A==",
       "type": "package",
       "path": "microsoft.data.odata/5.8.2",
       "files": [
@@ -8065,7 +8002,7 @@
       ]
     },
     "Newtonsoft.Json/10.0.1": {
-      "sha512": "ebWzW9j2nwxQeBo59As2TYn7nYr9BHicqqCwHOD1Vdo+50HBtLPuqdiCYJcLdTRknpYis/DSEOQz5KmZxwrIAg==",
+      "sha512": "Hbb0Fyv63NhhC4Wwvxrib5JW3ZqVlICE6201AMQ6vA5n3dKXhTCIBhRjaqZgFXKWaLx4MLj/8QbiOKbC5UKJbA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.1",
       "files": [
@@ -8089,7 +8026,7 @@
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
-      "sha512": "5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
+      "sha512": "BlY7iXdN1IPl1FnheDCqNiD2Oe95K/s37nLRKhxiEv4ymVfMMGBp9qI7LbRk/h9jc/L/1Yy47fVYwWjjSTF/Ig==",
       "type": "package",
       "path": "newtonsoft.json.bson/1.0.1",
       "files": [
@@ -8102,7 +8039,7 @@
       ]
     },
     "NuGet.Frameworks/4.0.0": {
-      "sha512": "WCkN68c8q+USG+Ot1MmBDH+9DUo5dk7UB0QDMiwCYhrH7ZoFLKFGGNzJ8C3LTR1DvB1LW9BOxKeznnZznKiCTA==",
+      "sha512": "TEhdgc75hrYSdXy2mC72A0eVBO7Jf21bYV7dU3Q6i0/NB47xZmeJ10W3t7KUhhEf5NnK6zSsioO72q/E9HDDCA==",
       "type": "package",
       "path": "nuget.frameworks/4.0.0",
       "files": [
@@ -8530,56 +8467,6 @@
         "lib/netstandard1.5/StackExchange.Redis.StrongName.xml",
         "stackexchange.redis.strongname.1.2.4.nupkg.sha512",
         "stackexchange.redis.strongname.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore/1.0.0": {
-      "sha512": "pYppc+iPifsAYUWi+UoblnjFkUtfP9RZfj5JQaUmEgiWRz5RsCcIuKHvNCGG5AojVKfgjWC4naUPJx4fCjqvDg==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore/1.0.0",
-      "files": [
-        "lib/net451/Swashbuckle.AspNetCore.dll",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.dll",
-        "swashbuckle.aspnetcore.1.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.Swagger/1.0.0": {
-      "sha512": "tzZ6tXjopV6jvcHzOX7PjyYBWqof5mhJUXqxb/kPF17Z5LXxr+uglnTLlYOjWCm5BfvdxWYtU95uJgc14L1Eqw==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/1.0.0",
-      "files": [
-        "lib/net451/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/net451/Swashbuckle.AspNetCore.Swagger.xml",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.xml",
-        "swashbuckle.aspnetcore.swagger.1.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swagger.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/1.0.0": {
-      "sha512": "1kuKS+4x1m85gpTOqICp5BRZB3Ir6VsegPN9hanH6xRp+tGDQNfFhVNPZ59Wrl8gM8YqIhB85xmFAkK68CqVdA==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/1.0.0",
-      "files": [
-        "lib/net451/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/net451/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "swashbuckle.aspnetcore.swaggergen.1.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggergen.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/1.0.0": {
-      "sha512": "syirndQQePJXF8Dgzgjqt0AoxWVguPQy/p4siHNACBSGicxvk6AAd1ULIFE83ANJOCl2GmXuAvNAZBMXGbxK9A==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/1.0.0",
-      "files": [
-        "lib/net451/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/net451/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "swashbuckle.aspnetcore.swaggerui.1.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -9443,7 +9330,7 @@
       ]
     },
     "System.Diagnostics.FileVersionInfo/4.3.0": {
-      "sha512": "omCF64wzQ3Q2CeIqkD6lmmxeMZtGHUmzgFMPjfVaOsyqpR66p/JaZzManMw1s33osoAb5gqpncsjie67+yUPHQ==",
+      "sha512": "2u4oH1zj7ObkGAf1vWx4dKq0FhFQ5MTcw2NHzEbK/lrSOhts2Vz6f9jQ/GyDYXHKrYcMSiskRuB4y4yZYXhOZw==",
       "type": "package",
       "path": "system.diagnostics.fileversioninfo/4.3.0",
       "files": [
@@ -9889,7 +9776,7 @@
       ]
     },
     "System.Interactive.Async/3.1.1": {
-      "sha512": "hZccYiIE5RS1/J9Tb/BNtosAGVggdlsJm4Ojdu+gDV0p4AIi+LUfUogMKkRacljQEJd2AG6vYzvcjhQFkqoZmw==",
+      "sha512": "WQCSDNR967w88CeQggNPf1z+TXCZYjtK4Oq7vo06Wi9/LN6wpfpQmkPNUgbn84XVNbYPc2cUAQrLhXyiapuIhg==",
       "type": "package",
       "path": "system.interactive.async/3.1.1",
       "files": [
@@ -11629,7 +11516,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+      "sha512": "vUMWszRdMRCBocWJQF0GlPV+fOA+5hpUx6cI5MyMe9YWHISQi45HfVrBWZcY0VR/lj9cJfCFLvh9Mkk7gg5Rpw==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -12202,7 +12089,7 @@
       ]
     },
     "System.Spatial/5.8.2": {
-      "sha512": "0RfZZJ8RlrfjoBPAF6pczX4Nd2kyLM8EX1PCP5Rqs/jOhJBUPYhpXjIsVAYN7kocj9IJ9XoJWAxWgXIDtJY2Ag==",
+      "sha512": "mGlxMgEs/dN0uOifijlpEuPGxFjAbHJHbVYp6L4KSzP13o7lELWiWt5csL4xPfdZAe0pGAwKNS3IT5kraZCF1Q==",
       "type": "package",
       "path": "system.spatial/5.8.2",
       "files": [
@@ -13170,7 +13057,7 @@
       ]
     },
     "System.Xml.XPath/4.3.0": {
-      "sha512": "v1JQ5SETnQusqmS3RwStF7vwQ3L02imIzl++sewmt23VGygix04pEH+FCj1yWb+z4GDzKiljr1W7Wfvrx0YwgA==",
+      "sha512": "fpgp4Z3zUMF8OIiCplLehBLk5ioku0ComXDpfnE+N/A9uKC0Cig2OIE0wSpQ6zibpynL+bkWaufs1D6jKfDFCA==",
       "type": "package",
       "path": "system.xml.xpath/4.3.0",
       "files": [
@@ -13207,7 +13094,7 @@
       ]
     },
     "System.Xml.XPath.XDocument/4.3.0": {
-      "sha512": "jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
+      "sha512": "G2GxS/jINZyjFZ+AnXjEh39mw2fTlZFKK0EjYqEjTR5heBRurhoqJlD6aqxNemL3368Zn4yt1VY5YekxXB1++A==",
       "type": "package",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "files": [
@@ -13275,12 +13162,11 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0",
-      "Swashbuckle.AspNetCore >= 1.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\legal\\.nuget\\packages\\": {},
+    "C:\\Users\\josue.telles\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13289,17 +13175,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\TestePortalTelemedicina\\ApiEventosCore\\ApiEventosCore\\ApiEventosCore.csproj",
+      "projectUniqueName": "C:\\Users\\josue.telles\\Downloads\\webapieventos\\ApiEventosCore\\ApiEventosCore.csproj",
       "projectName": "ApiEventosCore",
-      "projectPath": "C:\\Projetos\\TestePortalTelemedicina\\ApiEventosCore\\ApiEventosCore\\ApiEventosCore.csproj",
-      "packagesPath": "C:\\Users\\legal\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\TestePortalTelemedicina\\ApiEventosCore\\ApiEventosCore\\obj\\",
+      "projectPath": "C:\\Users\\josue.telles\\Downloads\\webapieventos\\ApiEventosCore\\ApiEventosCore.csproj",
+      "packagesPath": "C:\\Users\\josue.telles\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\josue.telles\\Downloads\\webapieventos\\ApiEventosCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\legal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\josue.telles\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13307,6 +13193,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\josue.telles\\.dotnet\\NuGetFallbackFolder": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -13343,10 +13230,6 @@
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
-          },
-          "Swashbuckle.AspNetCore": {
-            "target": "Package",
-            "version": "1.0.0"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
