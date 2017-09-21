@@ -38,14 +38,23 @@ namespace ApiEventosCore.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("novo")]
-        public async void Novo([FromBody]Usuario usuario)
+        public async Task<IActionResult> Novo([FromBody]Usuario usuario)
         {
-            using (var ctx = new EventosDataContext())
+            if (!VerificaSeUsuarioJaExiste(usuario.UserName))
             {
-                usuario.Senha = EncryptPassword.Encode(usuario.Senha);
-                await ctx.Usuario.AddAsync(usuario);
-                await ctx.SaveChangesAsync();
+                using (var ctx = new EventosDataContext())
+                {
+                    usuario.Senha = EncryptPassword.Encode(usuario.Senha);
+                    await ctx.Usuario.AddAsync(usuario);
+                    await ctx.SaveChangesAsync();
+                }
+
+                return Ok(usuario);
             }
+            else
+            {
+                return BadRequest("Já existe Usuário com este nome!");
+            }           
         }
 
         [HttpPut("{id}")]
@@ -69,28 +78,53 @@ namespace ApiEventosCore.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("crieusuariopadrao")]
-        public async Task<JsonResult> CrieUsuarioPadrao()
+        public async Task<IActionResult> CrieUsuarioPadrao()
         {
-            Usuario usuario;
-            var senha = "123456";
-            using (var ctx = new EventosDataContext())
+
+            if (!VerificaSeUsuarioJaExiste("admin"))
             {
-                usuario = new Usuario
+                Usuario usuario;
+                var senha = "123456";
+                using (var ctx = new EventosDataContext())
                 {
-                    DataCadastro = DateTime.Now.Date,
-                    Email = "admin@mail.com",
-                    Nome = "admin",
-                    Senha = senha,
-                    UserName = "admin"
+                    usuario = new Usuario
+                    {
+                        DataCadastro = DateTime.Now.Date,
+                        Email = "admin@mail.com",
+                        Nome = "admin",
+                        Senha = senha,
+                        UserName = "admin"
 
-                };
+                    };
 
-                usuario.Senha = EncryptPassword.Encode(usuario.Senha);
-                await ctx.Usuario.AddAsync(usuario);
-                await ctx.SaveChangesAsync();
+                    usuario.Senha = EncryptPassword.Encode(usuario.Senha);
+                    await ctx.Usuario.AddAsync(usuario);
+                    await ctx.SaveChangesAsync();
+                }
+
+                return new JsonResult($"Usuario: {usuario.UserName} Senha: {senha}.");
+            }
+            else
+            {
+                return BadRequest("Já existe Usuário com este nome!");
             }
 
-            return new JsonResult($"Usuario: {usuario.UserName} Senha: {senha}." );
+        }
+
+        private bool VerificaSeUsuarioJaExiste(string userName)
+        {
+            using (var ctx = new EventosDataContext())
+            {
+                var usuario = from u in ctx.Usuario
+                             where u.UserName == userName
+                             select u;
+
+                if (usuario == null)
+                    return false;
+
+            }
+
+            return true;
         }
     }
 }
