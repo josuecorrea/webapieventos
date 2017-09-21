@@ -79,12 +79,12 @@ namespace ApiEventosCore.Security
 
             var response = new
             {
-                access_token = encodedJwt,
-                expires_in = (int)_options.Expiration.TotalSeconds,
+                id = userLogged.Id,
                 username = userLogged.UserName,
                 name = userLogged.Nome,
-                id = userLogged.Id,
-                email = userLogged.Email
+                email = userLogged.Email,
+                access_token = encodedJwt,
+                expires_in = (int)_options.Expiration.TotalSeconds               
             };
 
             context.Response.ContentType = "application/json";
