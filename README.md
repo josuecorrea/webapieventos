@@ -6,6 +6,14 @@ Api Documentation
 
 http://localhost:<random_port>/swagger
 
+Rodando a aplicação:
+1º Faça o clone.
+2º Abra no visual studio 2017 com asp.net core 2.0
+3º Faça o migratio(Sql Server) 
+   3.1 Execute: Add-Migration "NomeDaSuaMigration"
+   3.2 Update-Database
+4º Rode aplicação(F5)
+
 Cadastrando usuário padrão:
 
 http://localhost:<random_port>/api/usuario/CrieUsuarioPadrao
