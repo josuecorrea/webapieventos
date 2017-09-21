@@ -1,4 +1,5 @@
 ﻿using ApiEventosCore.Data;
+using ApiEventosCore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
@@ -50,6 +51,7 @@ namespace ApiEventosCore.Security
             var password = context.Request.Form["password"];
 
             var identity = await GetIdentity(username, EncryptPassword.Encode(password));
+            var userLogged = GetUser(username, EncryptPassword.Encode(password));
             if (identity == null)
             {
                 context.Response.StatusCode = 400;
@@ -78,7 +80,11 @@ namespace ApiEventosCore.Security
             var response = new
             {
                 access_token = encodedJwt,
-                expires_in = (int)_options.Expiration.TotalSeconds
+                expires_in = (int)_options.Expiration.TotalSeconds,
+                username = userLogged.UserName,
+                name = userLogged.Nome,
+                id = userLogged.Id,
+                email = userLogged.Email
             };
 
             context.Response.ContentType = "application/json";
@@ -97,6 +103,15 @@ namespace ApiEventosCore.Security
             }
 
             return Task.FromResult<ClaimsIdentity>(null);
+        }
+
+        private Usuario GetUser(string username, string password)
+        {
+            var ctx = new EventosDataContext();
+
+            var user = ctx.Usuario.Where(c => c.UserName == username && c.Senha == password).FirstOrDefault();
+
+            return user;
         }
     }
 }
