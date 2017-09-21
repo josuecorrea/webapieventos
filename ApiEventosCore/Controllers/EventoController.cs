@@ -50,7 +50,6 @@ namespace ApiEventosCore.Controllers
             using (var ctx = new EventosDataContext())
             {
                 // _logger.LogInformation("Adicionou um novo Evento");
-                var usuarioLogado = User.Identity.Name;
                 await ctx.Evento.AddAsync(evento);
                 await ctx.SaveChangesAsync();
             }

@@ -1,0 +1,11 @@
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\bin\Release\netcoreapp2.0\ApiEventosCore.deps.json
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\bin\Release\netcoreapp2.0\ApiEventosCore.runtimeconfig.json
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\bin\Release\netcoreapp2.0\ApiEventosCore.runtimeconfig.dev.json
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\bin\Release\netcoreapp2.0\ApiEventosCore.dll
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\bin\Release\netcoreapp2.0\ApiEventosCore.pdb
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\obj\Release\netcoreapp2.0\ApiEventosCore.csprojResolveAssemblyReference.cache
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\obj\Release\netcoreapp2.0\ApiEventosCore.csproj.CoreCompileInputs.cache
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\obj\Release\netcoreapp2.0\ApiEventosCore.AssemblyInfoInputs.cache
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\obj\Release\netcoreapp2.0\ApiEventosCore.AssemblyInfo.cs
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\obj\Release\netcoreapp2.0\ApiEventosCore.dll
+C:\Users\josue.telles\Downloads\webapieventos\ApiEventosCore\obj\Release\netcoreapp2.0\ApiEventosCore.pdb
