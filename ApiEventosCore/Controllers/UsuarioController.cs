@@ -115,9 +115,9 @@ namespace ApiEventosCore.Controllers
         {
             using (var ctx = new EventosDataContext())
             {
-                var usuario = from u in ctx.Usuario
+                var usuario = (from u in ctx.Usuario
                              where u.UserName == userName
-                             select u;
+                             select u).FirstOrDefault();
 
                 if (usuario == null)
                     return false;
