@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -66,14 +67,26 @@ namespace ApiEventosCore.Controllers
         [HttpDelete("{id}")]
         [Authorize]
         [Route("delete")]
-        public async void Delete(int id)
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
         {
-            using (var ctx = new EventosDataContext())
+            try
             {
-               // _logger.LogInformation("Excluiu um Evento");
-                ctx.Evento.Remove(await ctx.Evento.FindAsync(id));
-                await ctx.SaveChangesAsync();
+                using (var ctx = new EventosDataContext())
+                {
+                    // _logger.LogInformation("Excluiu um Evento");
+                    ctx.Evento.Remove(await ctx.Evento.FindAsync(id));
+                    await ctx.SaveChangesAsync();
+                }
+
+                return Ok("Evento excluído");
             }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+                
+            }
+           
         }
 
         [HttpDelete("{id}")]
