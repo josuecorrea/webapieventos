@@ -1,6 +1,7 @@
 ﻿using ApiEventosCore.Data;
 using ApiEventosCore.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace ApiEventosCore.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("Policy")]
     public class EventoController : Controller
     {
         ILoggerFactory _loggerFactory;

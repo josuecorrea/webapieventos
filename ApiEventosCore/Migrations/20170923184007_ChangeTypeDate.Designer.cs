@@ -11,9 +11,10 @@ using System;
 namespace ApiEventosCore.Migrations
 {
     [DbContext(typeof(EventosDataContext))]
-    partial class EventosDataContextModelSnapshot : ModelSnapshot
+    [Migration("20170923184007_ChangeTypeDate")]
+    partial class ChangeTypeDate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

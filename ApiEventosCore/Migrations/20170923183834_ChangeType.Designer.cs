@@ -11,9 +11,10 @@ using System;
 namespace ApiEventosCore.Migrations
 {
     [DbContext(typeof(EventosDataContext))]
-    partial class EventosDataContextModelSnapshot : ModelSnapshot
+    [Migration("20170923183834_ChangeType")]
+    partial class ChangeType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,13 +35,11 @@ namespace ApiEventosCore.Migrations
 
                     b.Property<string>("DataFim")
                         .IsRequired()
-                        .HasColumnName("EVEN_DATA_FIM")
-                        .HasMaxLength(15);
+                        .HasColumnName("EVEN_DATA_FIM");
 
                     b.Property<string>("DataInicio")
                         .IsRequired()
-                        .HasColumnName("EVEN_DATA_INICIO")
-                        .HasMaxLength(15);
+                        .HasColumnName("EVEN_DATA_INICIO");
 
                     b.Property<string>("Descricao")
                         .IsRequired()

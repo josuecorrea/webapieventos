@@ -40,6 +40,8 @@ namespace ApiEventosCore
                     .AllowAnyHeader());
             });
 
+
+
             var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
             var tokenValidationParameters = new TokenValidationParameters
             {

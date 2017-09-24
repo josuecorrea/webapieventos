@@ -2,6 +2,7 @@
 using ApiEventosCore.Models;
 using ApiEventosCore.Security;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 namespace ApiEventosCore.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("Policy")]
     public class UsuarioController : Controller
     {
         [HttpGet]

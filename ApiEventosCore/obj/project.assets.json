@@ -6252,7 +6252,7 @@
       ]
     },
     "Microsoft.Data.Edm/5.8.2": {
-      "sha512": "h1tOn8HejyYOxSKflUbyYI/71TAKI4200gmFTiPCCxHKNW93pWu/D1ZVXIU+wmHAmAqSswUvF3RjrXxfPT/Gqg==",
+      "sha512": "P/d8DxA6MFHroBEn/jW0LMQSIKnsRRibrZtRCLfov2boQfrQ1R1BVgkJ5oIhcQsOm0l4POv+I2ny6RBsclNbOw==",
       "type": "package",
       "path": "microsoft.data.edm/5.8.2",
       "files": [
@@ -6316,7 +6316,7 @@
       ]
     },
     "Microsoft.Data.OData/5.8.2": {
-      "sha512": "gl0JE68CSX0G5Zhoa42yASeRFhq8eq3NRFtHXyhLVIuF0YxfHjJRwFc9oL0lT3f3NEy3aY0gO2MBrRb6Yyp/2A==",
+      "sha512": "oEIUtXcRiKogF0yZxA+QdgxoBJ34989qL/5xOSrTfxAhzNJV5Hw6DRdWgUCpeXFMoJUQx7ptbHCN+My/LCQfsg==",
       "type": "package",
       "path": "microsoft.data.odata/5.8.2",
       "files": [
@@ -8002,7 +8002,7 @@
       ]
     },
     "Newtonsoft.Json/10.0.1": {
-      "sha512": "Hbb0Fyv63NhhC4Wwvxrib5JW3ZqVlICE6201AMQ6vA5n3dKXhTCIBhRjaqZgFXKWaLx4MLj/8QbiOKbC5UKJbA==",
+      "sha512": "ebWzW9j2nwxQeBo59As2TYn7nYr9BHicqqCwHOD1Vdo+50HBtLPuqdiCYJcLdTRknpYis/DSEOQz5KmZxwrIAg==",
       "type": "package",
       "path": "newtonsoft.json/10.0.1",
       "files": [
@@ -8026,7 +8026,7 @@
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
-      "sha512": "BlY7iXdN1IPl1FnheDCqNiD2Oe95K/s37nLRKhxiEv4ymVfMMGBp9qI7LbRk/h9jc/L/1Yy47fVYwWjjSTF/Ig==",
+      "sha512": "5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
       "type": "package",
       "path": "newtonsoft.json.bson/1.0.1",
       "files": [
@@ -8039,7 +8039,7 @@
       ]
     },
     "NuGet.Frameworks/4.0.0": {
-      "sha512": "TEhdgc75hrYSdXy2mC72A0eVBO7Jf21bYV7dU3Q6i0/NB47xZmeJ10W3t7KUhhEf5NnK6zSsioO72q/E9HDDCA==",
+      "sha512": "WCkN68c8q+USG+Ot1MmBDH+9DUo5dk7UB0QDMiwCYhrH7ZoFLKFGGNzJ8C3LTR1DvB1LW9BOxKeznnZznKiCTA==",
       "type": "package",
       "path": "nuget.frameworks/4.0.0",
       "files": [
@@ -9330,7 +9330,7 @@
       ]
     },
     "System.Diagnostics.FileVersionInfo/4.3.0": {
-      "sha512": "2u4oH1zj7ObkGAf1vWx4dKq0FhFQ5MTcw2NHzEbK/lrSOhts2Vz6f9jQ/GyDYXHKrYcMSiskRuB4y4yZYXhOZw==",
+      "sha512": "omCF64wzQ3Q2CeIqkD6lmmxeMZtGHUmzgFMPjfVaOsyqpR66p/JaZzManMw1s33osoAb5gqpncsjie67+yUPHQ==",
       "type": "package",
       "path": "system.diagnostics.fileversioninfo/4.3.0",
       "files": [
@@ -9776,7 +9776,7 @@
       ]
     },
     "System.Interactive.Async/3.1.1": {
-      "sha512": "WQCSDNR967w88CeQggNPf1z+TXCZYjtK4Oq7vo06Wi9/LN6wpfpQmkPNUgbn84XVNbYPc2cUAQrLhXyiapuIhg==",
+      "sha512": "hZccYiIE5RS1/J9Tb/BNtosAGVggdlsJm4Ojdu+gDV0p4AIi+LUfUogMKkRacljQEJd2AG6vYzvcjhQFkqoZmw==",
       "type": "package",
       "path": "system.interactive.async/3.1.1",
       "files": [
@@ -11516,7 +11516,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "vUMWszRdMRCBocWJQF0GlPV+fOA+5hpUx6cI5MyMe9YWHISQi45HfVrBWZcY0VR/lj9cJfCFLvh9Mkk7gg5Rpw==",
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -12089,7 +12089,7 @@
       ]
     },
     "System.Spatial/5.8.2": {
-      "sha512": "mGlxMgEs/dN0uOifijlpEuPGxFjAbHJHbVYp6L4KSzP13o7lELWiWt5csL4xPfdZAe0pGAwKNS3IT5kraZCF1Q==",
+      "sha512": "0RfZZJ8RlrfjoBPAF6pczX4Nd2kyLM8EX1PCP5Rqs/jOhJBUPYhpXjIsVAYN7kocj9IJ9XoJWAxWgXIDtJY2Ag==",
       "type": "package",
       "path": "system.spatial/5.8.2",
       "files": [
@@ -13057,7 +13057,7 @@
       ]
     },
     "System.Xml.XPath/4.3.0": {
-      "sha512": "fpgp4Z3zUMF8OIiCplLehBLk5ioku0ComXDpfnE+N/A9uKC0Cig2OIE0wSpQ6zibpynL+bkWaufs1D6jKfDFCA==",
+      "sha512": "v1JQ5SETnQusqmS3RwStF7vwQ3L02imIzl++sewmt23VGygix04pEH+FCj1yWb+z4GDzKiljr1W7Wfvrx0YwgA==",
       "type": "package",
       "path": "system.xml.xpath/4.3.0",
       "files": [
@@ -13094,7 +13094,7 @@
       ]
     },
     "System.Xml.XPath.XDocument/4.3.0": {
-      "sha512": "G2GxS/jINZyjFZ+AnXjEh39mw2fTlZFKK0EjYqEjTR5heBRurhoqJlD6aqxNemL3368Zn4yt1VY5YekxXB1++A==",
+      "sha512": "jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "type": "package",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "files": [
@@ -13166,7 +13166,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josue.telles\\.nuget\\packages\\": {},
+    "C:\\Users\\legal\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13175,17 +13175,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\josue.telles\\Downloads\\webapieventos\\ApiEventosCore\\ApiEventosCore.csproj",
+      "projectUniqueName": "C:\\Projetos\\TestePortalTelemedicina\\ApiEventosCore\\ApiEventosCore\\ApiEventosCore.csproj",
       "projectName": "ApiEventosCore",
-      "projectPath": "C:\\Users\\josue.telles\\Downloads\\webapieventos\\ApiEventosCore\\ApiEventosCore.csproj",
-      "packagesPath": "C:\\Users\\josue.telles\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josue.telles\\Downloads\\webapieventos\\ApiEventosCore\\obj\\",
+      "projectPath": "C:\\Projetos\\TestePortalTelemedicina\\ApiEventosCore\\ApiEventosCore\\ApiEventosCore.csproj",
+      "packagesPath": "C:\\Users\\legal\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\TestePortalTelemedicina\\ApiEventosCore\\ApiEventosCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\josue.telles\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\legal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13193,7 +13193,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\josue.telles\\.dotnet\\NuGetFallbackFolder": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

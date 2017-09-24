@@ -25,10 +25,12 @@ namespace ApiEventosCore.Data.EntitieTypeConfiguration
 
             builder.Property(c => c.DataInicio)
                    .HasColumnName("EVEN_DATA_INICIO")
+                   .HasMaxLength(15)
                    .IsRequired();
 
             builder.Property(c => c.DataFim)
                    .HasColumnName("EVEN_DATA_FIM")
+                   .HasMaxLength(15)
                    .IsRequired();
 
             builder.Property(c => c.HoraInicio)

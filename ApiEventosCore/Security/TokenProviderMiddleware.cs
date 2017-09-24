@@ -1,5 +1,6 @@
 ﻿using ApiEventosCore.Data;
 using ApiEventosCore.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace ApiEventosCore.Security
 {
+    [EnableCors("Policy")]
     public class TokenProviderMiddleware
     {
         private readonly RequestDelegate _next;
@@ -28,6 +30,7 @@ namespace ApiEventosCore.Security
 
         public Task Invoke(HttpContext context)
         {
+            context.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
             // If the request path doesn't match, skip
             if (!context.Request.Path.Equals(_options.Path, StringComparison.Ordinal))
             {

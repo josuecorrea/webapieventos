@@ -16,10 +16,10 @@ namespace ApiEventosCore.Models
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Informe a data de início")]
-        public DateTime DataInicio { get; set; }
+        public string DataInicio { get; set; }
 
         [Required(ErrorMessage = "Informe a data do término")]
-        public DateTime DataFim { get; set; }
+        public string DataFim { get; set; }
 
         [Required(ErrorMessage = "Informe a hora do inicio")]
         public string HoraInicio { get; set; }
@@ -43,8 +43,8 @@ namespace ApiEventosCore.Models
 
         public void ValidaSeAhDataDeIncioEhValida()
         {
-            if (DataInicio.Date < DateTime.Now)
-                throw new Exception("Data de Incio não pode ser menor que a data atual :" + DateTime.Now.Date);
+            //if (DataInicio.Date < DateTime.Now)
+            //    throw new Exception("Data de Incio não pode ser menor que a data atual :" + DateTime.Now.Date);
         }
     }
 }
