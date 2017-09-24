@@ -29,8 +29,8 @@ namespace ApiEventosCore.Security
         }
 
         public Task Invoke(HttpContext context)
-        {
-            context.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+        {            
+             context.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
             // If the request path doesn't match, skip
             if (!context.Request.Path.Equals(_options.Path, StringComparison.Ordinal))
             {
